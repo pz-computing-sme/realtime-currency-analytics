@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://convertemoedas.web.app/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+   <url>
+    <loc>https://convertemoedas.web.app/articles/artigo1.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.web.app/articles/artigo2.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.web.app/articles/artigo3.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.web.app/articles/artigo4.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.web.app/articles/artigo5.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.web.app/politica-privacidade.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://convertemoedas.firebaseapp.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

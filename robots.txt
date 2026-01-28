@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://convertemoedas.web.app/sitemap.xml
