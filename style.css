@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+/* Menu Hambúrguer - Versão Desktop */
+.menu-toggle {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 1000;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid #00ff88;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #00ff88;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    background: rgba(0, 0, 0, 0.98);
+    padding: 60px 20px 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.main-nav.active {
+    transform: translateX(0);
+}
+
+.main-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.main-nav a:hover {
+    background: rgba(0, 255, 136, 0.15);
+    transform: translateX(10px);
+}
+
+.close-menu {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #00ff88;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    /* Versão mais compacta */
+    .menu-toggle {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+        gap: 3px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .menu-toggle span {
+        height: 2px;
+    }
+
+    .main-nav {
+        width: 170px;
+        padding: 45px 12px 12px;
+    }
+
+    .main-nav a {
+        padding: 10px;
+        margin: 6px 0;
+        font-size: 0.9em;
+        transform: translateX(5px);
+    }
+
+    .close-menu {
+        right: 15px;
+        top: 15px;
+        font-size: 18px;
+    }
+
+    .container {
+        padding-left: 12px;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ff88;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.titulo-bandeira {
+    display: inline-block;
+    width: 32px;
+    height: 24px;
+    background: url('https://flagcdn.com/br.svg');
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.converter-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+select, input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+.resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.moeda-box {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 100px;
+}
+
+.brasil {
+    border: 2px solid #00ff88;
+}
+
+.bandeira {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.destaque {
+    font-size: 1.2em;
+    color: #00ff88;
+}
+
+.taxa {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+.seo-content {
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+.seo-content h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.seo-content h3 {
+    color: #00ff88;
+    margin: 15px 0;
+}
+
+.blog {
+    margin-top: 50px;
+}
+
+.blog h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post h3 {
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .moeda-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #00ff88, #00cc6a);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+}
+
+.scroll-top i {
+    color: #1a1a1a;
+    font-size: 1.5em;
+}
+
+.scroll-top.visible {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(25, 25, 25, 0.95);
+    color: #fff;
+    padding: 20px;
+    z-index: 9999;
+    display: none;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    flex: 1;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.accept-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.reject-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.settings-btn {
+    background: #3498db;
+    color: white;
+}
+
+.cookie-link {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cookie-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .cookie-btn {
+        width: 100%;
+    }
+}
